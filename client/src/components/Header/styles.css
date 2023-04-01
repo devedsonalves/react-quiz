@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background-color: #333;
+  border-bottom: 0.111rem solid #fff;
+
+  width: 100vw;
+  margin: 0;
+  margin-bottom: 5rem;
+  padding: 1rem;
+}
+
+header .logo img {
+  width: 8rem;
+}
+
+h3 {
+  color: #fff;
+  font-weight: 400;
+}

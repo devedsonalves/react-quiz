@@ -5,7 +5,7 @@ import Header from "../../components/Header";
 import "./styles.css";
 
 export default function Quiz() {
-  const questoes = Perguntas ?? [];
+  const questoes = [...Perguntas];
   const [perguntaAtual, setPerguntaAtual] = useState(0);
   const [mostrarPontuacao, setMostrarPontuacao] = useState(false);
   const [pontos, setPontos] = useState(0);
@@ -32,10 +32,10 @@ export default function Quiz() {
           <main className="container">
             <div className="pontuacao">
               <span>
-                Você acertou {pontos} de {questoes.length} perguntas
+                VOCÊ ACERTOU {pontos} DE {questoes.length} QUESTÔES
               </span>
             </div>
-            <div>
+            <div className="buttonHome">
               <a href="/">HOME</a>
             </div>
           </main>

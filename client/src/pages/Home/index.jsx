@@ -8,21 +8,18 @@ export default function Home() {
     <>
       <Header />
       <div className="container">
-        <div className="title">
+        <div className="titulo">
           <h1>QUIZ SOBRE ABNT</h1>
         </div>
-        <div className="subtitle">
-          <span>
-            <i class="ph ph-arrow-down"></i>
-          </span>
+        <div className="subtitulo">
+          <i class="ph ph-arrow-down"></i>
           <h5>CLIQUE NO BOTÃO ABAIXO PARA COMEÇAR</h5>
-          <span>
-            <i class="ph ph-arrow-down"></i>
-          </span>
+          <i class="ph ph-arrow-down"></i>
         </div>
-        <div className="buttonStart">
-          <a href="/quiz">COMEÇAR</a>
-        </div>
+        <a href="/quiz" className="botaoComecar">
+          <i class="ph ph-play"></i>
+          <p>COMEÇAR</p>
+        </a>
       </div>
       <div className="grupo">
         <h4>EQUIPE:</h4>

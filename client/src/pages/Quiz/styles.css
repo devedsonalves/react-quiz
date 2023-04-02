@@ -11,6 +11,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  -webkit-box-shadow: 4px 4px 0px -2px #ffffff;
+  box-shadow: 4px 4px 0px -2px #ffffff;
+}
+
+.containerP {
+  background-color: #333;
+  color: #fff;
+
+  width: 40rem;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin: 5rem auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  -webkit-box-shadow: 4px 4px 0px -2px #ffffff;
+  box-shadow: 4px 4px 0px -2px #ffffff;
 }
 
 .pontuacao {
@@ -30,13 +50,11 @@
 
 .contagemPerguntas {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
-}
-
-.contagemPerguntas span {
-  font-size: 2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .pergunta {
@@ -56,41 +74,42 @@
   width: 100%;
 }
 
-button {
+.grupoResposta button {
   display: flex;
   justify-content: left;
   align-items: center;
+  text-align: start;
 
   width: 100%;
   margin: 0 1.2rem 1rem;
   padding: 0.6em 1.2em;
 
-  color: #fff;
   background-color: #1a1a1a;
-  border-radius: 0.8rem;
+  color: #fff;
   border: 0.1rem solid #fff;
+  border-radius: 0.8rem;
 
   font-size: 1rem;
   font-weight: 400;
   font-family: inherit;
-  transition: border-color 0.25s;
   cursor: pointer;
 }
 
-button:hover {
+.grupoResposta button:hover {
   background-color: #000;
 }
 
-.buttonHome {
+.botaoHome {
+  display: flex;
   margin-top: 2rem;
-
   background: white;
   border-radius: 0.7rem;
   border: 0.111rem solid #fff;
+  text-decoration: none;
 }
 
-.buttonHome a {
-  padding: 0.5rem 1rem;
+.botaoHome p {
+  padding: 0.7rem 0.7rem 0.7rem 0.3rem;
   color: #333;
   text-decoration: none;
   font-weight: bold;
@@ -100,13 +119,28 @@ button:hover {
   justify-content: center;
 }
 
-.buttonHome:hover {
+.botaoHome i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 0.7rem;
+}
+
+.botaoHome:hover {
   background: #333;
   border: 0.111rem solid #fff;
   transition: all 1s;
 }
 
-.buttonHome a:hover {
+.botaoHome:hover p {
+  color: #fff;
+  transition: all 1s;
+}
+
+.botaoHome:hover i {
   color: #fff;
   transition: all 1s;
 }

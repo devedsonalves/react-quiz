@@ -29,15 +29,16 @@ export default function Quiz() {
       <Header />
       {mostrarPontuacao ? (
         <>
-          <main className="container">
+          <main className="containerP">
             <div className="pontuacao">
               <span>
                 VOCÊ ACERTOU {pontos} DE {questoes.length} QUESTÔES
               </span>
             </div>
-            <div className="buttonHome">
-              <a href="/">HOME</a>
-            </div>
+            <a href="/" className="botaoHome">
+              <i class="ph ph-house"></i>
+              <p>HOME</p>
+            </a>
           </main>
         </>
       ) : (
@@ -45,9 +46,12 @@ export default function Quiz() {
           <main className="container">
             <div className="infoPerguntas">
               <div className="contagemPerguntas">
-                <span>
+                <div>
+                  <h5>Quiz</h5>
+                </div>
+                <div>
                   {perguntaAtual + 1}/{questoes.length}
-                </span>
+                </div>
               </div>
               <div className="pergunta">{questoes[perguntaAtual].pergunta}</div>
             </div>
@@ -60,6 +64,7 @@ export default function Quiz() {
                   >
                     {opcoesResposta.resposta}
                   </button>
+                  <div className=""></div>
                 </div>
               ))}
             </div>

@@ -8,20 +8,25 @@ body {
   font-size: 3rem;
 }
 
-.buttonStart {
+.botaoComecar {
   background: white;
   border-radius: 0.7rem;
   border: 0.111rem solid #fff;
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.buttonStart:hover {
+.botaoComecar:hover {
   background: #333;
   border: 0.111rem solid #fff;
   transition: all 1s;
 }
 
-.buttonStart a {
-  padding: 0.8rem 8rem;
+.botaoComecar p {
+  padding: 1rem 7rem 1rem 0.5rem;
   color: #333;
   text-decoration: none;
   font-weight: bold;
@@ -31,14 +36,25 @@ body {
   justify-content: center;
 }
 
-.buttonStart a:hover {
+.botaoComecar i {
+  color: #333;
+  padding-left: 7rem;
+  font-weight: bold;
+}
+
+.botaoComecar:hover p {
+  color: #fff;
+  transition: all 1s;
+}
+
+.botaoComecar:hover i {
   color: #fff;
   transition: all 1s;
 }
 
 .grupo {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-top: 2rem;
 }
 
@@ -46,14 +62,15 @@ body {
   font-weight: 400;
 }
 
-.subtitle {
+.subtitulo {
   display: flex;
   align-items: center;
   justify-content: center;
 
   margin: 1rem 0;
+  font-size: 1rem;
 }
 
-.subtitle h5 {
+.subtitulo h5 {
   margin: 0 1rem;
 }

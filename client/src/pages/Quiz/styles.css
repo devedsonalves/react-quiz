@@ -84,7 +84,7 @@
   margin: 0 1.2rem 1rem;
   padding: 0.6em 1.2em;
 
-  background-color: #1a1a1a;
+  background: #333;
   color: #fff;
   border: 0.1rem solid #fff;
   border-radius: 0.8rem;
@@ -96,7 +96,7 @@
 }
 
 .grupoResposta button:hover {
-  background-color: #000;
+  background-color: #888;
 }
 
 .botaoHome {

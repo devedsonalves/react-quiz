@@ -6,16 +6,27 @@ import "./styles.css";
 
 export default function Quiz() {
   const questoes = [...Perguntas];
+  const [pontos, setPontos] = useState(0);
   const [perguntaAtual, setPerguntaAtual] = useState(0);
   const [mostrarPontuacao, setMostrarPontuacao] = useState(false);
-  const [pontos, setPontos] = useState(0);
+  const [desativar, setDesativar] = useState(false);
+  const [resultado, setResultado] = useState(false);
 
-  function proximaPergunta(correta) {
-    const proximaQuestao = perguntaAtual + 1;
+  function verificar(correta) {
+    setDesativar(true);
+    setResultado(true);
 
     if (correta) {
       setPontos(pontos + 1);
     }
+
+    setTimeout(proximaPergunta, 2500);
+  }
+
+  function proximaPergunta() {
+    const proximaQuestao = perguntaAtual + 1;
+    setDesativar(false);
+    setResultado(false);
 
     if (proximaQuestao < questoes.length) {
       setPerguntaAtual(proximaQuestao);
@@ -60,13 +71,23 @@ export default function Quiz() {
                 <div className="grupoResposta" id="alt">
                   <span>{opcoesResposta.alternativa}</span>
                   <button
-                    onClick={() => proximaPergunta(opcoesResposta.correta)}
+                    onClick={() => verificar(opcoesResposta.correta)}
+                    disabled={desativar}
+                    style={
+                      resultado
+                        ? opcoesResposta.correta
+                          ? { background: "green" }
+                          : { background: "red" }
+                        : {
+                            background: "",
+                          }
+                    }
                   >
                     {opcoesResposta.resposta}
                   </button>
-                  <div className=""></div>
                 </div>
               ))}
+              <div>PONTOS: {pontos}</div>
             </div>
           </main>
         </>

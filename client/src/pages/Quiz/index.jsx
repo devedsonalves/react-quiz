@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Perguntas } from "../../data/perguntas";
 import Header from "../../components/Header";
+import ReactConffetti from "react-confetti";
 
 import "./styles.css";
 
@@ -20,11 +21,12 @@ export default function Quiz() {
       setPontos(pontos + 1);
     }
 
-    setTimeout(proximaPergunta, 2500);
+    setTimeout(proximaPergunta, 3000);
   }
 
   function proximaPergunta() {
     const proximaQuestao = perguntaAtual + 1;
+
     setDesativar(false);
     setResultado(false);
 
@@ -40,6 +42,7 @@ export default function Quiz() {
       <Header />
       {mostrarPontuacao ? (
         <>
+          <ReactConffetti className="confete" />
           <main className="containerP">
             <div className="pontuacao">
               <span>
@@ -78,9 +81,7 @@ export default function Quiz() {
                         ? opcoesResposta.correta
                           ? { background: "green" }
                           : { background: "red" }
-                        : {
-                            background: "",
-                          }
+                        : {}
                     }
                   >
                     {opcoesResposta.resposta}

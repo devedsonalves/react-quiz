@@ -144,3 +144,8 @@
   color: #fff;
   transition: all 1s;
 }
+
+.confete {
+  width: 100vw;
+  height: 100vh;
+}

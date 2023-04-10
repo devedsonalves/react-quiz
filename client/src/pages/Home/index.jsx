@@ -9,7 +9,7 @@ export default function Home() {
       <Header />
       <div className="container">
         <div className="titulo">
-          <h1>QUIZ SOBRE ABNT</h1>
+          <h1>QUIZ SOBRE WAZLAWICK</h1>
         </div>
         <div className="subtitulo">
           <i class="ph ph-arrow-down"></i>

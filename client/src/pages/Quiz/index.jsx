@@ -88,7 +88,7 @@ export default function Quiz() {
                   </button>
                 </div>
               ))}
-              <div>PONTOS: {pontos}</div>
+              <div className="pontos">PONTOS: {pontos}</div>
             </div>
           </main>
         </>

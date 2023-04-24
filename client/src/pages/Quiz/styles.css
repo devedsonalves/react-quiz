@@ -145,6 +145,10 @@
   transition: all 1s;
 }
 
+.pontos {
+  font-weight: 6 00;
+}
+
 .confete {
   width: 100vw;
   height: 100vh;
